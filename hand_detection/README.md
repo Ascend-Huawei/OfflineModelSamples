@@ -1,4 +1,4 @@
-# Face Detection
+# Hand Detection
 This model detects the hand of a person in given image.
 
 ## Model Description:
