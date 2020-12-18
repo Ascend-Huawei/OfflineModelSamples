@@ -10,7 +10,7 @@ Orignal model repository: https://github.com/victordibia/handtracking License: A
 
 #### Offline Model Conversion
 
-To prepare the Tensorflow model for inferene on Ascend 310 processor (product: Atlas 200 DK/Atlas 300), the following steps are taken
+To prepare the Tensorflow model for inference on Ascend 310 processor (product: Atlas 200 DK/Atlas 300), the following steps are taken:
 
 - Modify the original model: 
   - change dynamic shape input to fixed shape input
@@ -18,7 +18,7 @@ To prepare the Tensorflow model for inferene on Ascend 310 processor (product: A
   
   The modified Tensorflow frozen-graph model (.pb file) is available: https://drive.google.com/file/d/1Ls-28mkmKq5e6bQsK6iA9p9vqBBxqVFM/view?usp=sharing
 
-- Convertion with ATC tool (or MindStudio GUI):
+- Conversion with ATC tool (or MindStudio GUI):
 
   Download the .pb file, then run following cmd in the same directory:
   ```
@@ -35,7 +35,7 @@ To prepare the Tensorflow model for inferene on Ascend 310 processor (product: A
 - The pre-trained model will detect 2 types: hand and others.
 - Output is a list of 4 numpy arrays
   - Output 0: one number, Number of detections, shape (1,)
-  - Output 1: detected classes, shape (1,10), Note: maximum 10 objects (bounding boxes) are detected
+  - Output 1: detected classes, shape (1,10), **Note**: maximum 10 objects (bounding boxes) are detected
   - Output 2: confidence score for the detected classes, shape (1,10)
   - Output 3: bounding box coordinates, shape (1,10,4)
   shape: (1,10,4)
@@ -53,7 +53,7 @@ To prepare the Tensorflow model for inferene on Ascend 310 processor (product: A
     - filter bboxes with score higher than the threshold
     - plot bounding boxes on image
     
-  - To run code， simply using commands below in the terminal:
+  - To run code， simply use commands below in the terminal:
   
     ``` 
     cd src
