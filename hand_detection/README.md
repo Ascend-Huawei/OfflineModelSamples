@@ -6,7 +6,10 @@ This model detects the hand of a person in given image.
 #### Original Model
 
 The original model is MobileNet V1 + SSD, trained with Tensorflow framework.
-Orignal model repository: https://github.com/victordibia/handtracking License: Apache-2.0
+
+Orignal model repository: https://github.com/victordibia/handtracking 
+
+License: Apache-2.0
 
 #### Offline Model Conversion
 
