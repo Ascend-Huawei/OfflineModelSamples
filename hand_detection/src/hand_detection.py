@@ -44,7 +44,7 @@ def PreProcessing(image):
 	# resize image to 300*300, and RGB
 	image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 	image = cv2.resize(image, (300,300))
-	# type conversion to float 32
+	# type conversion to UINT8
 	image = image.astype(np.uint8).copy()
 	return image
 
