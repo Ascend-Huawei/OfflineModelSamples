@@ -16,7 +16,7 @@ License: Apache-2.0
 To prepare the Tensorflow model for inference on Ascend 310 processor (product: Atlas 200 DK/Atlas 300), the following steps are taken:
 
 - Modify the original model: 
-  - change dynamic shape input to fixed shape input
+  - change dynamic-shape input to fixed-shape input
   - remove/replace unsupported operators
   
   The modified Tensorflow frozen-graph model (.pb file) is available: https://drive.google.com/file/d/1Ls-28mkmKq5e6bQsK6iA9p9vqBBxqVFM/view?usp=sharing
@@ -31,8 +31,8 @@ To prepare the Tensorflow model for inference on Ascend 310 processor (product: 
 
 #### Input
 - **Input Shape**: [1,300,300, 3]
-- **Input Format** : NCHW
-- **Input Type**: FLOAT32
+- **Input Format** : NHWC
+- **Input Type**: UINT8
 
 #### Output
 - The pre-trained model will detect 2 types: hand and others.
@@ -40,8 +40,7 @@ To prepare the Tensorflow model for inference on Ascend 310 processor (product: 
   - Output 0: one number, Number of detections, shape (1,)
   - Output 1: detected classes, shape (1,10), **Note**: maximum 10 objects (bounding boxes) are detected
   - Output 2: confidence score for the detected classes, shape (1,10)
-  - Output 3: bounding box coordinates, shape (1,10,4)
-  shape: (1,10,4)
+  - Output 3: bounding box coordinates, shape (1,10,4): bounding box coordinates for the 10 boxes
     - **0 position**: top left y coordinate
     - **1 position**: top left x coordinate
     - **2 position**: bottom right y coordinate
@@ -51,7 +50,7 @@ To prepare the Tensorflow model for inference on Ascend 310 processor (product: 
   - Codes in https://github.com/Ascend-Huawei/OfflineModelSamples/tree/main/hand_detection/src create a sample to quickly understand how the model works, preprocessing, inference, postprocessing are already included.
   - Preprocessing: 
     - **Image Resize**: 300*300
-    - **Image Type**: FLOAT32, RGB
+    - **Image Type**: UINT8, RGB
   - Postprocessing:
     - filter bboxes with score higher than the threshold
     - plot bounding boxes on image
