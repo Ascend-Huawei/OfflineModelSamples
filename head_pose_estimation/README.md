@@ -18,7 +18,7 @@ Execute the following command from the project directory 'face_detection/src' to
 --framework=0 --save_original_model=false 
 --model="face_detection.prototxt"**
 
-For versions lower than C75, you may download the model from the below link:
+For versions lower than C75, you may download the offline model directly from the below link:
 
 https://drive.google.com/file/d/1vKyuRg_NIDBx2C-KxM9Mf_dGUhRj7qf9/view?usp=sharing
 
