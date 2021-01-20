@@ -30,7 +30,7 @@ Execute the following command from the project directory 'head_pose_estimation/s
 --framework=0 --save_original_model=false 
 --model="face_detection.prototxt"**
 
-In case the conversion fails, please directly download from the link below:
+**NOTE:** In case the above conversion step fails, please directly download the offline model from the link below:
 https://drive.google.com/file/d/1vKyuRg_NIDBx2C-KxM9Mf_dGUhRj7qf9/view?usp=sharing
 
 
