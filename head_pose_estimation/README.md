@@ -85,7 +85,7 @@ Result image with 64 keypoints plotted on detected face saved in 'out' folder.
     - **Image Type**: FLOAT32
     - **Input Format** : NCHW
     - Change order from **[300, 300, 3]**(HWC) to **[3, 300, 300]**(CHW)
-    - 
+    
   - The om model file (.om) must be downloaded to the project folder 'head_pose_estimation/src'
  
   - Postprocessing:
