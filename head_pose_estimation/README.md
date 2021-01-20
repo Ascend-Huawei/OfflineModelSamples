@@ -23,7 +23,7 @@ Download the weights and network files to your project directory 'head_pose_esti
 https://obs-model-ascend.obs.cn-east-2.myhuaweicloud.com/head_pose_estimation/head_pose_estimation.caffemodel
 - Network: https://github.com/Ascend-Huawei/models/blob/master/computer_vision/object_detect/head_pose_estimation/head_pose_estimation.prototxt
 
-**Note:** To download the Network file with **wget**, please use following
+- **Note:** To download the Network file with **wget**, please use following
 
 **wget https://raw.githubusercontent.com/Ascend-Huawei/models/master/computer_vision/object_detect/head_pose_estimation/head_pose_estimation.prototxt**
 
